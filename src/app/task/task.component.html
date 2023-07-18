@@ -6,7 +6,7 @@
       <input type="text" class="form-control" id="task" [(ngModel)]="newTask.task" name="task" required>
       <div *ngIf="taskForm.submitted && taskForm.controls['task'].invalid" class="text-danger">
         O título é obrigatório.
-      </div>
+    </div>
     </div>
     <div class="form-group">
       <label for="description">Descrição</label>
@@ -15,12 +15,25 @@
         A descrição é obrigatória.
       </div>
     </div>
-    <button type="submit" class="btn btn-danger">Adicionar</button>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
   </form>
 
   <h4>Titulos cadastrados</h4>
   <div class="form-group">
-      <label for="search">Pesquisar título</label>
+      <label for="search">
+          Pesquisar título
+          <a href="#" class="search-icon-link"><i class="fas fa-search"></i></a>
+      </label>
+      <style>
+      .search-icon-link {
+          color: rgb(47, 0, 255); /* Altere a cor conforme desejar */
+      }
+
+      .search-icon-link:hover {
+          color: rgb(255, 0, 0);
+          cursor: pointer;
+      }
+      </style>
     <div class="input-group">
       <input type="text" class="form-control" id="search" [(ngModel)]="searchTerm">
       <div class="input-group-append">

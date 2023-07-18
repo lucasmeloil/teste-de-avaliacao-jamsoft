@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 interface Task {
   task: string;
@@ -12,7 +12,7 @@ interface Task {
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css'],
 })
-export class TaskComponent {
+export class TaskComponent implements OnInit {
   tasks: Task[] = [];
   newTask: Task = {
     task: '',
@@ -20,6 +20,16 @@ export class TaskComponent {
     date: new Date(),
   };
   searchTerm: string = '';
+
+  constructor() {}
+
+  ngOnInit() {
+    // Recupera as tarefas salvas do sessionStorage ao inicializar o componente
+    const savedTasks = sessionStorage.getItem('tasks');
+    if (savedTasks) {
+      this.tasks = JSON.parse(savedTasks);
+    }
+  }
 
   get filteredTasks(): Task[] {
     if (this.searchTerm.trim() === '') {
@@ -42,12 +52,17 @@ export class TaskComponent {
     this.newTask.task = '';
     this.newTask.description = '';
 
+    // Salva as tarefas atualizadas no sessionStorage
+    sessionStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 
   editTask(task: Task) {
     const editedTask = prompt('Editar Tarefa', task.task);
     if (editedTask !== null) {
       task.task = editedTask;
+
+      // Salva as tarefas atualizadas no sessionStorage
+      sessionStorage.setItem('tasks', JSON.stringify(this.tasks));
     }
   }
 
@@ -57,20 +72,21 @@ export class TaskComponent {
       const index = this.tasks.indexOf(task);
       if (index !== -1) {
         this.tasks.splice(index, 1);
+
+        // Salva as tarefas atualizadas no sessionStorage
+        sessionStorage.setItem('tasks', JSON.stringify(this.tasks));
       }
     }
   }
 
   toggleTaskStatus(task: Task) {
     task.completed = !task.completed;
+
+    // Salva as tarefas atualizadas no sessionStorage
+    sessionStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 
   searchTasks() {
     console.log('Pesquisar tarefas:', this.searchTerm);
   }
 }
-
-
-
-
-

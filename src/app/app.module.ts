@@ -16,7 +16,7 @@ import { TaskComponent } from './task/task.component';
     BrowserModule,
     FormsModule,
     RouterModule, // Adicione o RouterModule aos imports
-    AppRoutingModule // Adicione o AppRoutingModule aos imports
+    AppRoutingModule, // Adicione o AppRoutingModule aos imports
   ],
   providers: [],
   bootstrap: [AppComponent]
