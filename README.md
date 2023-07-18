@@ -18,7 +18,7 @@ Edição: O usuário pode editar as informações de um item cadastrado.
 Exclusão: O usuário pode excluir um item cadastrado.
 Como Executar o Projeto:
 
-Clone o repositório: Execute o comando git clone <URL_DO_REPOSITÓRIO> para clonar o repositório do GitHub em seu ambiente local.
+Clone o repositório: Execute o comando git clone https://github.com/lucasmeloil/teste-de-av-JAMSOFTEC para clonar o repositório do GitHub em seu ambiente local.
 Instale as dependências: Navegue até a pasta do projeto e execute o comando npm install para instalar as dependências necessárias.
 Configurações do Banco de Dados: Certifique-se de configurar corretamente as informações de conexão com o banco de dados SQL Server no arquivo app.module.ts.
 Inicie o servidor: Execute o comando ng serve para iniciar o servidor de desenvolvimento do Angular.
