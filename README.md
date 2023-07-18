@@ -8,7 +8,7 @@ O objetivo deste projeto é criar um sistema de cadastro simples utilizando o fr
 
 Recursos utilizados:
 
-Angular: Utilizamos o Angular para criar a estrutura e a lógica do sistema.
+Angular: Utilizei o Angular para criar a estrutura e a lógica do sistema.
 Material Design: Utilizamos o Angular Material para estilizar os componentes e criar uma interface amigável.
 Banco de Dados: Utilizamos um banco de dados SQL Server para armazenar os cadastros.
 Funcionalidades Principais:
