@@ -1,4 +1,4 @@
-Olá, equipe da JAMSOFT Tecnologia!
+Olá, equipe da JAMSOFT TECNOLOGIA!
 
 Gostaria de apresentar o projeto de Cadastro Simples desenvolvido em Angular. Este projeto foi criado como um teste de avaliação para a maior e melhor, JAMSOFT TECNOLOGIA.
 
