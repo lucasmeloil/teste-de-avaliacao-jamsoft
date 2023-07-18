@@ -1,0 +1,61 @@
+<div class="container">
+  <h2>Cadastro de Simples</h2>
+  <form (ngSubmit)="submitTask()" #taskForm="ngForm">
+    <div class="form-group">
+      <label for="task">Título</label>
+      <input type="text" class="form-control" id="task" [(ngModel)]="newTask.task" name="task" required>
+      <div *ngIf="taskForm.submitted && taskForm.controls['task'].invalid" class="text-danger">
+        O título é obrigatório.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Descrição</label>
+      <textarea class="form-control" id="description" [(ngModel)]="newTask.description" name="description" required></textarea>
+      <div *ngIf="taskForm.submitted && taskForm.controls['description'].invalid" class="text-danger">
+        A descrição é obrigatória.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-danger">Adicionar</button>
+  </form>
+
+  <h4>Titulos cadastrados</h4>
+  <div class="form-group">
+      <label for="search">Pesquisar título</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="search" [(ngModel)]="searchTerm">
+      <div class="input-group-append">
+
+      </div>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Data</th>
+        <th>Hora</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of filteredTasks">
+        <td>{{ task.task }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.date | date:'dd/MM/yyyy' }}</td>
+        <td>{{ task.date | date:'HH:mm' }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="editTask(task)">
+               <i class="fas fa-edit"></i> Editar
+          </button>
+          <button class="btn btn-danger" (click)="deleteTask(task)">
+               <i class="fas fa-trash"></i> Excluir
+          </button>
+        </td>
+              </tr>
+      <tr *ngIf="filteredTasks.length === 0 && searchTerm !== ''">
+        <td colspan="6">Nenhuma título encontrado</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
