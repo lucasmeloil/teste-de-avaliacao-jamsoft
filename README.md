@@ -6,6 +6,9 @@ Gostaria de apresentar o projeto de Cadastro Simples desenvolvido em Angular. Es
 
 O objetivo deste projeto é criar um sistema de cadastro simples utilizando o framework Angular. O sistema permite que o usuário faça o cadastro de itens com título e descrição, e exibe uma tabela com os cadastros realizados, incluindo a data e hora do cadastro. Além disso, o sistema oferece opções de editar e excluir os cadastros.
 
+![image01](https://github.com/lucasmeloil/teste-de-avaliacao-jamsoft/assets/123641061/6d90adea-91ae-4340-b7d9-03b81b29ac98)
+
+
 # Recursos utilizados:
 
  Angular: Utilizei o Angular para criar a estrutura e a lógica do sistema.
