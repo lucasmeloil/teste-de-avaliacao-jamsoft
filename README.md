@@ -42,4 +42,4 @@ Espero que este projeto possa demonstrar meu comprometimento e paixão pela prog
 Obrigado novamente pela oportunidade e estou ansioso para futuras oportunidades de trabalho com vocês!
 
 Atenciosamente,
-Lucas Melo
+Lucas Melo.
