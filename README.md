@@ -22,7 +22,7 @@ Além das funcionalidades básicas de cadastro, listagem, edição e exclusão, 
 
 # Como Executar o Projeto:
 
-Clone o repositório: Execute o comando '' git clone https://github.com/lucasmeloil/teste-de-av-JAMSOFT_TECNOLOGIA '' para clonar o repositório do GitHub em seu ambiente local.
+Clone o repositório: Execute o comando '' git clone https://github.com/lucasmeloil/teste-de-avaliacao-jamsoft.git '' para clonar o repositório do GitHub em seu ambiente local.
 Instale as dependências: Navegue até a pasta do projeto e execute o comando'' npm install ''para instalar as dependências necessárias.
 Configurações do Banco de Dados: Certifique-se de configurar corretamente as informações de conexão com o banco de dados SQL Server no arquivo app.module.ts.
 Inicie o servidor: Execute o comando'' ng serve ''para iniciar o servidor de desenvolvimento do Angular.
